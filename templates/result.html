@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+</head>
+<body>
+    {% if result[1] > result[0] %}
+        <h1>Melanoma Details</h1>
+        <p>This image is likely to be melanoma with a confidence of {{ result[1] }}%.</p>
+        <!-- Add more details for melanoma -->
+    {% else %}
+        <h1>Benign Details</h1>
+        <p>This image is likely to be benign with a confidence of {{ result[0] }}%.</p>
+        <!-- Add more details for benign -->
+    {% endif %}
+    
+    <img src="../static/uploads/{{ img_path }}" alt="Uploaded Image">
+</body>
+</html>

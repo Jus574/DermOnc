@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Specialists Nearby</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDh2X_xILaFLflYxsCbA3AgZRZzl89zVN0&loading=async&libraries=places&v=weekly"></script>
+    <script src="../static/js/map.js"></script>
+    <link rel="stylesheet" href="../static/css/main.css">
+</head>
+<style>
+    
+
+</style>
+<body>
+    <section id='header'>
+        <div class='container'>
+            <nav class="navbar-container">
+                <div class="level-left">
+                    <!-- Logo -->
+                    <div class="forpc">
+                        <img alt="logo" src=logo.png />;
+                    </div>
+                    <!-- Mobile dropdown menu -->
+                        <div class="mobile-dropdown">
+                            <!-- Mobile dropdown content goes here -->
+                            <div class="dropdown-container" id="dropdown-container">
+                                <!-- DropDown toggle -->
+                                <div class="dropdown-toggle" id="dropdown-toggle" onclick="toggleDropdown()">
+                                <img class="drop-down-button" src="../static/images/hamburger_menu_icon.svg" alt="menu">
+                                </div>
+                                <!-- DropDown list -->
+                                <div class="dropdown-list" id="dropdown-list">
+                                <!-- Blog link -->
+                                <div class="dropdown-list__item">
+                                    <a href="/blog" class="navMenu">BLOG</a>
+                                </div>
+                                <!-- Contact us link -->
+                                <div class="dropdown-list__item">
+                                    <a href="/contact" class="navMenu">CONTACT US</a>
+                                </div>                                                               
+                                <!-- Profile settings link -->
+                                <div class="dropdown-list__item">
+                                    <a href="/profile" class="navMenu">SETTINGS</a>
+                                </div>
+                                <!-- Sign out button -->
+                                <div class="dropdown-list__item">
+                                    <button onclick="logout()" class="navMenu">SIGN OUT</button>
+                                </div>
+                                <!-- If user is not authenticated -->
+                                <!-- Login button -->
+                                <div class="dropdown-list__item">
+                                    <button onclick="toggleLogin()" class="navMenu">LOGIN</button>
+                                </div>
+                                <!-- Sign up button -->
+                                <div class="dropdown-list__item">
+                                    <button onclick="toggleSignUp()" class="navMenu">SIGN UP</button>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="level-right">
+                    <!-- Links -->
+                    <div class="topmenu">
+                        <a href="/blog" class="navMenu">BLOG</a>
+                    </div>
+                    <div class="topmenu">
+                        <a href="/contact" class="navMenu">CONTACT US</a>
+                    </div>
+                    <!-- If user is logged in -->
+                    <div class="topmenu">
+                        <a href="/requests" class="navMenu">DIAGNOSIS REQUESTS</a>
+                    </div>
+                    <!-- If user is not logged in -->
+                    <!-- Logo for mobile view -->
+                    <div class="mobile">
+                        <!-- Your logo content goes here -->
+                        <img alt="logo" src=logo.png />;
+                    </div>
+                </div>
+            </nav>
+            <h1 class='maptitle' >Skin <span class='yellow'>Specialists</span> Nearby</h1>
+        </div>
+    </section>
+    <div id="map" class="map"></div>  
+</body>
+</html>
