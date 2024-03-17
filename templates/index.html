@@ -33,7 +33,7 @@
                                     <div class="dropdown-list" id="dropdown-list">
                                     <!-- Blog link -->
                                     <div class="dropdown-list__item">
-                                        <a href="/blog" class="navMenu">BLOG</a>
+                                        <a href="#scan" class="navMenu" onclick="scrollToSection('scan')">SCAN</a>
                                     </div>
                                     <!-- Contact us link -->
                                     <div class="dropdown-list__item">
@@ -41,20 +41,7 @@
                                     </div>                                                               
                                     <!-- Profile settings link -->
                                     <div class="dropdown-list__item">
-                                        <a href="/profile" class="navMenu">SETTINGS</a>
-                                    </div>
-                                    <!-- Sign out button -->
-                                    <div class="dropdown-list__item">
-                                        <button onclick="logout()" class="navMenu">SIGN OUT</button>
-                                    </div>
-                                    <!-- If user is not authenticated -->
-                                    <!-- Login button -->
-                                    <div class="dropdown-list__item">
-                                        <button onclick="toggleLogin()" class="navMenu">LOGIN</button>
-                                    </div>
-                                    <!-- Sign up button -->
-                                    <div class="dropdown-list__item">
-                                        <button onclick="toggleSignUp()" class="navMenu">SIGN UP</button>
+                                        <a href="#find-specialists" class="navMenu" onclick="redirectToMap()">MAP</a>
                                     </div>
                                     </div>
                                 </div>
@@ -63,14 +50,14 @@
                     <div class="level-right">
                         <!-- Links -->
                         <div class="topmenu">
-                            <a href="/blog" class="navMenu">BLOG</a>
+                            <a href="#scan-section" class="navMenu" onclick="scrollToSection('scan')">SCAN</a>
                         </div>
                         <div class="topmenu">
                             <a href="#why-us-section" class="navMenu" onclick="scrollToSection('section1')">WHY US</a>
                         </div>
                         <!-- If user is logged in -->
                         <div class="topmenu">
-                            <a href="/requests" class="navMenu">DIAGNOSIS REQUESTS</a>
+                            <a href="#find-specialists" class="navMenu" onclick="redirectToMap()">FIND DERMATOLOGISTS</a>
                         </div>
                         <!-- If user is not logged in -->
                         <!-- Logo for mobile view -->

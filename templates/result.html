@@ -86,15 +86,15 @@
               
             <!-- {{result}} -->
     {% if disease == 1 %}
-        <h1>Benign Details</h1>
+        <h1>Benign</h1>
         <p>This image is likely to be benign with a confidence of {{ result[0] }}%.</p> 
         
     {% elif disease == 3 %}
-        <h1>BCC Details</h1>
-        <p>This image is likely to be BCC with a confidence of {{ result[0] }}%.</p> 
+        <h1>BCC</h1>
+        <p>This image is likely to be Basal Cell Carcinoma with a confidence of {{ result[0] }}%.</p> 
 
     {% elif disease == 4 %}
-        <h1>Melanoma Details</h1>
+        <h1>Melanoma</h1>
         <p>This image is likely to be Melanoma with a confidence of {{ result[1] }}%.</p> 
 
     {% else %}
