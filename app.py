@@ -1,24 +1,35 @@
 from flask import Flask, render_template, request
 import cv2
 import numpy as np
-from matplotlib import pyplot as plt
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.imagenet_utils import preprocess_input
 from tensorflow.keras.models import model_from_json
+import os
 
 app = Flask(__name__)
 
 # Load the benign vs malignant model
-with open("static/model/best_model.json", "r") as json_file:
-    loaded_model_json = json_file.read()
-loaded_model_imageNet = model_from_json(loaded_model_json)
-loaded_model_imageNet.load_weights("static/model/best_model.hdf5")
+model_dir = "static/model/"
+benign_model_path = os.path.join(model_dir, "best_model.json")
+benign_weights_path = os.path.join(model_dir, "best_model.hdf5")
+if os.path.exists(benign_model_path) and os.path.exists(benign_weights_path):
+    with open(benign_model_path, "r") as json_file:
+        loaded_model_json = json_file.read()
+    loaded_model_imageNet = model_from_json(loaded_model_json)
+    loaded_model_imageNet.load_weights(benign_weights_path)
+else:
+    print("Error: Model files not found.")
 
 # Load the Melanoma vs Basal Cell Carcinoma model
-with open("static/model/malignant_model.json", "r") as json_file:
-    malignant_model_json = json_file.read()
-malignant_model_imageNet = model_from_json(malignant_model_json)
-malignant_model_imageNet.load_weights("static/model/malignant_model.hdf5")
+malignant_model_path = os.path.join(model_dir, "malignant_model.json")
+malignant_weights_path = os.path.join(model_dir, "malignant_model.hdf5")
+if os.path.exists(malignant_model_path) and os.path.exists(malignant_weights_path):
+    with open(malignant_model_path, "r") as json_file:
+        malignant_model_json = json_file.read()
+    malignant_model_imageNet = model_from_json(malignant_model_json)
+    malignant_model_imageNet.load_weights(malignant_weights_path)
+else:
+    print("Error: Malignant model files not found.")
 
 
 def secondcheck(img):
@@ -63,7 +74,6 @@ def index():
 
 @app.route("/find-specialists")
 def find_specialists():
-    # Render the find-specialists.html template
     return render_template("find-specialists.html")
 
 
