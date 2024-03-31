@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basal Cell Carcinoma Information</title>
+  <link rel="stylesheet" href="../static/css/main.css">
+  <link rel="shortcut icon" href="../static/images/logo.ico" type="image/x-icon" />
+  <script src="../static/js/main.js" defer></script>
+</head>
+<body>
+  <div class='content'>
+    <section class='top-wrapper'>
+        <section id='header'>
+            <div class='container'>
+              <nav class="navbar-container" id="navbar-container">
+                <div class="level-left">
+                  <!-- Logo -->
+                  <div class="forpc">
+                      <img alt="logo" src=../static/images/logo.png />;
+                  </div>
+                  <!-- Mobile dropdown menu -->
+                      <div class="mobile-dropdown">
+                          <!-- Mobile dropdown content goes here -->
+                          <div class="dropdown-container" id="dropdown-container">
+                            <!-- DropDown toggle -->
+                            <div class="dropdown-toggle" id="dropdown-toggle" onclick="toggleDropdown()">
+                            <img class="drop-down-button" src="../static/images/hamburger_menu_icon.svg" alt="menu">
+                            </div>
+                            <!-- DropDown list -->
+                            <div class="dropdown-list" id="dropdown-list">
+                            <!-- Blog link -->
+                            <div class="dropdown-list__item">
+                                <a href="#Home" class="navMenu" onclick="redirectToHome()">HOME</a>
+                            </div>
+                            <!-- Contact us link -->
+                            <div class="dropdown-list__item">
+                                <a href="#info" class="navMenu" onclick="redirectToInfo()">INFO</a>
+                            </div>                                                               
+                            <!-- Profile settings link -->
+                            <div class="dropdown-list__item">
+                                <a href="#find-specialists" class="navMenu" onclick="redirectToMap()">MAP</a>
+                            </div>
+                            </div>
+                        </div>
+                      </div>
+              </div>
+              <div class="level-right">
+                  <!-- Links -->
+                  <div class="topmenu">
+                    <a href="#Home" class="navMenu" onclick="redirectToHome()">HOME</a>
+                  </div>
+                  <div class="topmenu">
+                    <a href="#info" class="navMenu" onclick="redirectToInfo()">INFO</a>
+                  </div>
+                  <!-- If user is logged in -->
+                  <div class="topmenu">
+                    <a href="#find-specialists" class="navMenu" onclick="redirectToMap()">FIND DERMATOLOGISTS</a>
+                  </div>
+                  <!-- If user is not logged in -->
+                  <!-- Logo for mobile view -->
+                  <div class="mobile">
+                      <!-- Your logo content goes here -->
+                      <img alt="logo" src=../static/images/logo.png />;
+                  </div>
+              </div>
+            </nav>
+            <div class='columns' style='align-items: center;'>
+                <div class='columns-column desktop-size-7 tablet-size-12 slider-wrapper'>
+                    <div class='slider'>
+                        <div class="slide"><img src="../static/images/chickenpox1.jpg" alt="Slide 1"></div>
+                        <div class="slide"><img src="../static/images/chickenpox2.jpg" alt="Slide 2"></div>
+                        <div class="slide"><img src="../static/images/chickenpox3.jpg" alt="Slide 3"></div>
+                    </div>
+                </div>
+                <div class='columns-column desktop-size-5 tablet-size-12'>
+                <h1 class='title'>Basal Cell Carcinoma</h1>
+                <h2 class='desc'>
+                    Basal cell carcinoma (BCC) is the most common form of skin cancer and the most frequently occurring form of all cancers. 
+                    In the U.S. alone, more than 4 million cases are diagnosed each year. 
+                    BCCs arise from abnormal, uncontrolled growth of basal cells.
+                    Understanding BCC causes, risk factors and warning signs can help you detect them early, when they are easiest to treat and cure.
+                </h2>
+                <br /><br />
+                </div>
+               
+            </div>
+            </div>
+        </section>
+        <section>
+        <div class='testimonials'></div>
+      </section>
+      <div id='section1' class='container'>
+        <h3 class='title'>
+          <p>Important <span class='blue font-italic'>Info</span></p>
+        </h3>
+        <div class='desc'></div>
+        <div class='columns'>
+          <div class='columns-column tablet-size-6 desktop-size-4'>
+            <div class='card'>
+              <img alt='reason' src='../static/images/why_to_use1.svg' />
+              <div class='wrapper'>
+                <h4 class='title'>
+                  What <span class='yellow font-italic'>Symptoms</span>
+                </h4>
+                <div class='desc'>
+                    Basal cell carcinoma (BCC) symptoms often manifest as a pearly or waxy bump on the skin, resembling a flesh-colored or pinkish patch. 
+                    These lesions may also develop into open sores or ulcers that fail to heal, frequently bleeding or forming a scab. 
+                    Additionally, BCCs can present as shiny, translucent bumps with visible blood vessels or as flat, 
+                    scaly reddish patches, typically occurring on sun-exposed areas of the skin.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='columns-column tablet-size-6 desktop-size-4'>
+            <div class='card'>
+              <img alt='reason' src='../static/images/health-care_4326687.svg' />
+              <div class='wrapper second'>
+                <h4 class='title'>
+                    How to <span class='yellow font-italic'>prevent</span>
+                </h4>
+                <div class='desc'>
+                    Preventing basal cell carcinoma (BCC) primarily involves minimizing exposure to uv radiation. 
+                    This includes practicing sun safety measures such as wearing protective clothing, seeking shade during peak sun hours, 
+                    and regularly applying broad-spectrum sunscreen. 
+                    Additionally, conducting regular skin self-examinations and promptly 
+                    reporting any suspicious changes or lesions to a dermatologist can aid in early detection and treatment of potential BCCs.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='columns-column desktop-size-4 tablet-size-6'>
+            <div class='card'>
+              <img alt='reason' src='../static/images/why_to_use3.png' />
+              <div class='wrapper third'>
+                <h4 class='title'>
+                  Treatment <span class='yellow font-italic'>and</span> Diagnosis
+                </h4>
+                <div class='desc'>
+                    Treatment options for BCC include surgical excision, which involves removing the cancerous tissue 
+                    along with a margin of healthy skin, and Mohs micrographic surgery, a precise technique to remove the tumor layer by layer 
+                    while preserving surrounding healthy tissue. 
+                    Other treatment modalities such as cryotherapy, topical medications, radiation therapy, and targeted therapy.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </section>
+    <footer class='footer'></footer>
+  </div>
+</body>
+</html>

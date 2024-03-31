@@ -26,7 +26,7 @@
             <div class="level-left">
               <!-- Logo -->
               <div class="forpc">
-                <img alt="logo" src=../static/images/logo.png />;
+                <img alt="logo" onclick="redirectToHome()" src=../static/images/logo.png />;
               </div>
               <!-- Mobile dropdown menu -->
               <div class="mobile-dropdown">
@@ -48,7 +48,7 @@
                   <div class="dropdown-list" id="dropdown-list">
                     <!-- Blog link -->
                     <div class="dropdown-list__item">
-                      <a href="#home" class="navMenu" onclick="redirecttoHome()"
+                      <a href="#home" class="navMenu" onclick="redirectToHome()"
                         >HOME</a
                       >
                     </div>
@@ -73,7 +73,7 @@
             <div class="level-right">
               <!-- Links -->
               <div class="topmenu">
-                <a href="#home" class="navMenu" onclick="redirecttoHome()"
+                <a href="#home" class="navMenu" onclick="redirectToHome()"
                   >HOME</a
                 >
               </div>
@@ -94,7 +94,7 @@
               <!-- Logo for mobile view -->
               <div class="mobile">
                 <!-- Your logo content goes here -->
-                <img alt="logo" src=../static/images/logo.png />;
+                <img alt="logo" onclick="redirectToHome()" src=../static/images/logo.png />;
               </div>
             </div>
           </nav>
@@ -105,34 +105,53 @@
         <h3 class="title">
           <p>Predictions</p>
         </h3>
+        <p>Predictions are made on the assumption that the image is of a mole on skin </p>
+        <p>Please make sure the image is taken in a well lit area and only the skin is captured</p>
         <img src="../static/uploads/{{img_path}}" alt="Uploaded Image" />
 
         <!-- {{result}} -->
         {% if disease == 1 %}
-        <h1>Benign</h1>
+        <h1>Benign Non Cancerous</h1>
         <p>
-          This image is likely to be benign with a confidence of {{ result[0]
-          }}%.
+            There is a {% if result[0] > 70 %}
+            high
+            {% else %}
+            low
+            {% endif %} chance this image is benign.
         </p>
 
         {% elif disease == 3 %}
-        <h1>BCC</h1>
+        <h1>BCC Cancerous</h1>
         <p>
-          This image is likely to be Basal Cell Carcinoma with a confidence of
-          {{ result[0] }}%.
-        </p>
+            There is a {% if result[0] > 70 %}
+            high
+            {% else %}
+            low
+            {% endif %} chance this image is of basal cell carcinoma.
+          </p>
 
         {% elif disease == 4 %}
-        <h1>Melanoma</h1>
+        <h1>Melanoma Cancerous</h1>
         <p>
-          This image is likely to be Melanoma with a confidence of {{ result[1]
-          }}%.
+            There is a {% if result[1] > 70 %}
+            high
+            {% else %}
+            low
+            {% endif %} chance this image is of melanoma.
         </p>
 
         {% else %}
         <h1>ERROR PREDICTION FAILED TRY AGAIN</h1>
 
         {% endif %}
+        <div class='btnGroup app-link-group'>
+        <div class='app-link headerBtn yellow' onclick="redirectToHome()">
+            <img src='../static/images/camera.svg' alt='camera' />
+            <div class='app-link-title'>
+                <div class='header'>TRY AGAIN</div>
+            </div>
+        </div>
+        </div>
       </section>
     </div>
   </body>
