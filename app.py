@@ -77,29 +77,14 @@ def ind():
     return render_template("index.html")
 
 
-@app.route("/find-specialists")
-def find_specialists():
-    return render_template("find-specialists.html")
-
-
-@app.route("/melanoma")
-def melanoma():
-    return render_template("melanoma.html")
-
-
-@app.route("/hives")
-def hives():
-    return render_template("hives.html")
-
-
 @app.route("/actinic-keratosis")
 def actinic():
     return render_template("actinic-keratosis.html")
 
 
-@app.route("/info")
-def info():
-    return render_template("info.html")
+@app.route("/basal-cell-carcinoma")
+def basal():
+    return render_template("basal-cell-carcinoma.html")
 
 
 @app.route("/chickenpox")
@@ -112,9 +97,39 @@ def cold():
     return render_template("cold-sore.html")
 
 
+@app.route("/find-specialists")
+def find_specialists():
+    return render_template("find-specialists.html")
+
+
+@app.route("/hives")
+def hives():
+    return render_template("hives.html")
+
+
+@app.route("/info")
+def info():
+    return render_template("info.html")
+
+
+@app.route("/melanoma")
+def melanoma():
+    return render_template("melanoma.html")
+
+
+@app.route("/merkel-cell-carcinoma")
+def merkel():
+    return render_template("merkel-cell-carcinoma.html")
+
+
 @app.route("/ringworm")
 def ringworm():
     return render_template("ringworm.html")
+
+
+@app.route("/squamous-cell-carcinoma")
+def squamous():
+    return render_template("squamous-cell-carcinoma.html")
 
 
 @app.route("/vitiligo")
