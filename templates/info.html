@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skin Disease Information</title>
+    <link href="../static/css/style.css" rel="stylesheet" />
+    <link href="../static/css/main.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="../static/images/logo.ico" type="image/x-icon" />
+    <script src="../static/js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="content">
+      <section class="top-wrapper">
+        <div class="container">
+          <nav class="navbar-container" id="navbar-container">
+            <div class="level-left">
+              <!-- Logo -->
+              <div class="forpc">
+                <img alt="logo" onclick="redirectToHome()" src=../static/images/logo.png />;
+              </div>
+              <!-- Mobile dropdown menu -->
+              <div class="mobile-dropdown">
+                <!-- Mobile dropdown content goes here -->
+                <div class="dropdown-container" id="dropdown-container" >
+                  <!-- DropDown toggle -->
+                  <div
+                    class="dropdown-toggle"
+                    id="dropdown-toggle"
+                    onclick="toggleDropdown()"
+                  >
+                    <img
+                      class="drop-down-button"
+                      src="../static/images/hamburger_menu_icon.svg"
+                      alt="menu"
+                    />
+                  </div>
+                  <!-- DropDown list -->
+                  <div class="dropdown-list" id="dropdown-list">
+                    <!-- Blog link -->
+                    <div class="dropdown-list__item">
+                      <a href="#scan" class="navMenu" onclick="redirectToHome()"
+                        >HOME</a
+                      >
+                    </div>
+                    <!-- Profile settings link -->
+                    <div class="dropdown-list__item">
+                      <a
+                        href="#find-specialists"
+                        class="navMenu"
+                        onclick="redirectToMap()"
+                        >MAP</a
+                      >
+                    </div>
+                
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="level-right">
+              <!-- Links -->
+              <div class="topmenu">
+                <a
+                  href="#scan-section"
+                  class="navMenu"
+                  onclick="redirectToHome()"
+                  >HOME</a
+                >
+              </div>
+              <div class="topmenu">
+                <a
+                  href="#find-specialists"
+                  class="navMenu"
+                  onclick="redirectToMap()"
+                  >FIND DERMATOLOGISTS</a
+                >
+              </div>
+   
+
+              <!-- Logo for mobile view -->
+              <div class="mobile">
+                <!--logo content goes here -->
+                <img alt="logo" onclick="redirectToHome()" src=../static/images/logo.png />;
+              </div>
+            </div>
+          </nav>
+        
+      
+    
+    <div id="all-info">
+      
+    </div>
+</div>
+</section>
+</div>
+  </body>
+  <script>
+    const skinCancerData = [
+      { title: "Melanoma", 
+        route: "melanoma" 
+      },
+      {
+        title: "Basal Cell Carcinoma",
+        route: "basal-cell-carcinoma",
+      },
+      { title: "Actinic keratosis", 
+        route: "actinic-keratosis" 
+      },
+      {
+        title: "Merkel cell carcinoma",
+        route: "merkel-cell-carcinoma",
+      },
+      {
+        title: "Squamous cell carcinoma",
+        route: "squamous-cell-carcinoma",
+      },
+    ];
+
+    const skinDiseaseData = [
+      { title: "Cold Sore", route: "cold-sore" },
+      { title: "Hives", route: "hives" },
+      { title: "Vitiligo", route: "vitiligo" },
+      { title: "Chickenpox", route: "chickenpox" },
+      { title: "Ringworm", route: "ringworm" },
+    ];
+
+    const category = ["Skin Cancer", "Skin Diseases"];
+    let tabIndex = 0;
+
+    function renderData() {
+      const container = document.getElementById("all-info");
+      container.innerHTML = `
+        <div class="header">
+            <div class="middle-section my-3">
+                <div class="tabs">
+                    ${category
+                      .map(
+                        (cat, index) => `
+                        <div class="tab p-1 ${
+                          tabIndex === index ? "selected" : ""
+                        }" onclick="changeTabIndex(${index})">
+                            <h3 class="fw-n">${cat}</h3>
+                        </div>
+                    `
+                      )
+                      .join("")}
+                </div>
+                <div class="cards">
+                    ${
+                      tabIndex === 0
+                        ? renderCards(skinCancerData)
+                        : renderCards(skinDiseaseData)
+                    }
+                </div>
+            </div>
+        </div>
+    `;
+    }
+
+    function renderCards(data) {
+      return data
+        .map(
+          (item) => `
+        <a href="${item.route}" class="my-1 p-1">${item.title}</a>
+    `
+        )
+        .join("");
+    }
+
+    function changeTabIndex(index) {
+      tabIndex = index;
+      renderData();
+    }
+
+    document.addEventListener("DOMContentLoaded", renderData);
+  </script>
+</html>

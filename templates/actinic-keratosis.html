@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actinic Keratosis Information</title>
+  <link rel="stylesheet" href="../static/css/main.css">
+  <link rel="shortcut icon" href="../static/images/logo.ico" type="image/x-icon" />
+  <script src="../static/js/main.js" defer></script>
+</head>
+<body>
+  <div class='content'>
+    <section class='top-wrapper'>
+        <section id='header'>
+            <div class='container'>
+              <nav class="navbar-container" id="navbar-container">
+                <div class="level-left">
+                  <!-- Logo -->
+                  <div class="forpc">
+                      <img alt="logo" src=../static/images/logo.png />;
+                  </div>
+                  <!-- Mobile dropdown menu -->
+                      <div class="mobile-dropdown">
+                          <!-- Mobile dropdown content goes here -->
+                          <div class="dropdown-container" id="dropdown-container">
+                              <!-- DropDown toggle -->
+                              <div class="dropdown-toggle" id="dropdown-toggle" onclick="toggleDropdown()">
+                              <img class="drop-down-button" src="../static/images/hamburger_menu_icon.svg" alt="menu">
+                              </div>
+                              <!-- DropDown list -->
+                              <div class="dropdown-list" id="dropdown-list">
+                              <!-- Blog link -->
+                              <div class="dropdown-list__item">
+                                  <a href="#Home" class="navMenu" onclick="redirectToHome()">HOME</a>
+                              </div>
+                              <!-- Contact us link -->
+                              <div class="dropdown-list__item">
+                                  <a href="#info" class="navMenu" onclick="redirectToInfo()">INFO</a>
+                              </div>                                                               
+                              <!-- Profile settings link -->
+                              <div class="dropdown-list__item">
+                                  <a href="#find-specialists" class="navMenu" onclick="redirectToMap()">MAP</a>
+                              </div>
+                              </div>
+                          </div>
+                      </div>
+              </div>
+              <div class="level-right">
+                  <!-- Links -->
+                  <div class="topmenu">
+                    <a href="#Home" class="navMenu" onclick="redirectToHome()">HOME</a>
+                  </div>
+                  <div class="topmenu">
+                    <a href="#info" class="navMenu" onclick="redirectToInfo()">INFO</a>
+                  </div>
+                  <!-- If user is logged in -->
+                  <div class="topmenu">
+                    <a href="#find-specialists" class="navMenu" onclick="redirectToMap()">FIND DERMATOLOGISTS</a>
+                  </div>
+                  <!-- If user is not logged in -->
+                  <!-- Logo for mobile view -->
+                  <div class="mobile">
+                      <!-- Your logo content goes here -->
+                      <img alt="logo" src=../static/images/logo.png />;
+                  </div>
+              </div>
+            </nav>
+            <div class='columns' style='align-items: center;'>
+                <div class='columns-column desktop-size-7 tablet-size-12 slider-wrapper'>
+                    <div class='slider'>
+                        <div class="slide"><img src="../static/images/Vitiligo1.jpg" alt="Slide 1"></div>
+                        <div class="slide"><img src="../static/images/Vitiligo2.jpeg" alt="Slide 2"></div>
+                    </div>
+                </div>
+                <div class='columns-column desktop-size-5 tablet-size-12'>
+                <h1 class='title'> Actinic Keratosis</h1>
+                <h2 class='desc'>
+                    Actinic keratosis (AK) is the most common precancer that forms on skin 
+                    damaged by chronic exposure to ultraviolet (UV) rays 
+                    from the sun and/or indoor tanning.Solar keratosis is another name for the condition.
+                </h2>
+                <br /><br />
+                </div>
+               
+            </div>
+            </div>
+        </section>
+        <section>
+        <div class='testimonials'></div>
+      </section>
+      <div id='section1' class='container'>
+        <h3 class='title'>
+          <p>Important <span class='blue font-italic'>Info</span></p>
+        </h3>
+        <div class='desc'></div>
+        <div class='columns'>
+          <div class='columns-column tablet-size-6 desktop-size-4'>
+            <div class='card'>
+              <img alt='reason' src='../static/images/why_to_use1.svg' />
+              <div class='wrapper'>
+                <h4 class='title'>
+                  What <span class='yellow font-italic'>Symptoms</span>
+                </h4>
+                <div class='desc'>
+                    Skin lesions associated with actinic keratosis (AK) typically exhibit a flat to slightly raised texture, 
+                    often accompanied by scaly, crusty, or rough patches. 
+                    They may manifest as small spots or grow to as much as an inch in diameter. 
+                    The color of these lesions can vary, appearing as red, tan, pink, skin-colored, brown, or silvery.
+                    AK lesions are commonly found on areas of the body exposed to ultraviolet (UV) radiation, including the face, lips, ears, scalp..
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='columns-column tablet-size-6 desktop-size-4'>
+            <div class='card'>
+              <img alt='reason' src='../static/images/health-care_4326687.svg' />
+              <div class='wrapper second'>
+                <h4 class='title'>
+                    How to <span class='yellow font-italic'>prevent</span>
+                </h4>
+                <div class='desc'>
+                    Preventing actinic keratosis (AK) involves adopting sun protection measures and lifestyle changes to minimize UV radiation exposure. 
+                    This includes limiting sun exposure during peak hours, wearing protective clothing, such as hats and sunglasses. 
+                    Regular skin checks and prompt consultation with a dermatologist for any suspicious changes are essential for early detection and intervention. 
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='columns-column desktop-size-4 tablet-size-6'>
+            <div class='card'>
+              <img alt='reason' src='../static/images/why_to_use3.png' />
+              <div class='wrapper third'>
+                <h4 class='title'>
+                  Treatment <span class='yellow font-italic'>and</span> Diagnosis
+                </h4>
+                <div class='desc'>
+                    If you have one or more actinic keratoses (AKs), it’s a sign of skin damage that puts you at a high risk for developing skin cancer. 
+                    Identifying and treating these precancerous lesions helps you reduce that risk. 
+                    Your treatment options depend on how many lesions you have, where they are, your age and overall health.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </section>
+    <footer class='footer'></footer>
+  </div>
+</body>
+</html>

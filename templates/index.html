@@ -5,68 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dermonc Website</title>
   <link rel="stylesheet" href="../static/css/main.css">
+  <link rel="shortcut icon" href="../static/images/logo.ico" type="image/x-icon" />
   <script src="../static/js/main.js" defer></script>
 </head>
-
-
 <body>
-    
   <div class='content'>
     <section class='top-wrapper'>
         <section id='header'>
             <div class='container'>
-                <nav class="navbar-container">
-                    <div class="level-left">
-                        <!-- Logo -->
-                        <div class="forpc">
-                            <img alt="logo" src=../static/images/logo.png />;
-                        </div>
-                        <!-- Mobile dropdown menu -->
-                            <div class="mobile-dropdown">
-                                <!-- Mobile dropdown content goes here -->
-                                <div class="dropdown-container" id="dropdown-container">
-                                    <!-- DropDown toggle -->
-                                    <div class="dropdown-toggle" id="dropdown-toggle" onclick="toggleDropdown()">
-                                    <img class="drop-down-button" src="../static/images/hamburger_menu_icon.svg" alt="menu">
-                                    </div>
-                                    <!-- DropDown list -->
-                                    <div class="dropdown-list" id="dropdown-list">
-                                    <!-- Blog link -->
-                                    <div class="dropdown-list__item">
-                                        <a href="#scan" class="navMenu" onclick="scrollToSection('scan')">SCAN</a>
-                                    </div>
-                                    <!-- Contact us link -->
-                                    <div class="dropdown-list__item">
-                                        <a href="#why-us-section" class="navMenu" onclick="scrollToSection('section1')">WHY US</a>
-                                    </div>                                                               
-                                    <!-- Profile settings link -->
-                                    <div class="dropdown-list__item">
-                                        <a href="#find-specialists" class="navMenu" onclick="redirectToMap()">MAP</a>
-                                    </div>
-                                    </div>
-                                </div>
+              <nav class="navbar-container" id="navbar-container">
+                <div class="level-left">
+                  <!-- Logo -->
+                  <div class="forpc">
+                      <img alt="logo" src=../static/images/logo.png />;
+                  </div>
+                  <!-- Mobile dropdown menu -->
+                      <div class="mobile-dropdown">
+                          <!-- Mobile dropdown content goes here -->
+                          <div class="dropdown-container" id="dropdown-container">
+                              <!-- DropDown toggle -->
+                              <div class="dropdown-toggle" id="dropdown-toggle" onclick="toggleDropdown()">
+                              <img class="drop-down-button" src="../static/images/hamburger_menu_icon.svg" alt="menu">
+                              </div>
+                              <!-- DropDown list -->
+                              <div class="dropdown-list" id="dropdown-list">
+                              <!-- Blog link -->
+                              <div class="dropdown-list__item">
+                                  <a href="#scan" class="navMenu" onclick="scrollToSection('scan')">SCAN</a>
+                              </div>
+                              <!-- Contact us link -->
+                              <div class="dropdown-list__item">
+                                  <a href="#why-us-section" class="navMenu" onclick="scrollToSection('section1')">WHY US</a>
+                              </div>                                                               
+                              <!-- Profile settings link -->
+                              <div class="dropdown-list__item">
+                                  <a href="#find-specialists" class="navMenu" onclick="redirectToMap()">MAP</a>
+                              </div>
+                              <div class="dropdown-list__item">
+                                <a href="#info" class="navMenu" onclick="redirectToInfo()">INFO</a>
                             </div>
-                    </div>
-                    <div class="level-right">
-                        <!-- Links -->
-                        <div class="topmenu">
-                            <a href="#scan-section" class="navMenu" onclick="scrollToSection('scan')">SCAN</a>
-                        </div>
-                        <div class="topmenu">
-                            <a href="#why-us-section" class="navMenu" onclick="scrollToSection('section1')">WHY US</a>
-                        </div>
-                        <!-- If user is logged in -->
-                        <div class="topmenu">
-                            <a href="#find-specialists" class="navMenu" onclick="redirectToMap()">FIND DERMATOLOGISTS</a>
-                        </div>
-                        <!-- If user is not logged in -->
-                        <!-- Logo for mobile view -->
-                        <div class="mobile">
-                            <!-- Your logo content goes here -->
-                            <img alt="logo" src=../static/images/logo.png />;
-                        </div>
-                    </div>
-                </nav>
+                              </div>
+                          </div>
+                      </div>
+              </div>
+              <div class="level-right">
+                  <!-- Links -->
+                  <div class="topmenu">
+                      <a href="#scan-section" class="navMenu" onclick="scrollToSection('scan')">SCAN</a>
+                  </div>
+                  <div class="topmenu">
+                      <a href="#why-us-section" class="navMenu" onclick="scrollToSection('section1')">WHY US</a>
+                  </div>
+                 
+                  <div class="topmenu">
+                      <a href="#find-specialists" class="navMenu" onclick="redirectToMap()">FIND DERMATOLOGISTS</a>
+                  </div>
+                  <div class="topmenu">
+                    <a href="#info" class="navMenu" onclick="redirectToInfo()">INFO</a>
+                </div>
+                  
+                  <!-- Logo for mobile view -->
+                  <div class="mobile">
+                      <!-- Your logo content goes here -->
+                      <img alt="logo" src=../static/images/logo.png />;
+                  </div>
+              </div>
+            </nav>
             <div class='columns' style='align-items: center;'>
                 <div class='columns-column desktop-size-7 tablet-size-12 slider-wrapper'>
                     <div class='slider'>
@@ -226,6 +230,5 @@
     </section>
     <footer class='footer'></footer>
   </div>
-
 </body>
 </html>

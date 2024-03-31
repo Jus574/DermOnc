@@ -58,7 +58,7 @@ function initMap(lats,longs)
     const request = {
         location: { lat: lats, lng: longs }, //location
         radius: 100000, // 100km radius
-        keyword: "skin specialist",
+        keyword: "skin specialist, skin cancer, dermatologist",
     };
 
     // Perform nearby search to find skin specialists

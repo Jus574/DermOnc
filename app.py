@@ -72,9 +72,54 @@ def index():
     return render_template("index.html")
 
 
+@app.route("/index")
+def ind():
+    return render_template("index.html")
+
+
 @app.route("/find-specialists")
 def find_specialists():
     return render_template("find-specialists.html")
+
+
+@app.route("/melanoma")
+def melanoma():
+    return render_template("melanoma.html")
+
+
+@app.route("/hives")
+def hives():
+    return render_template("hives.html")
+
+
+@app.route("/actinic-keratosis")
+def actinic():
+    return render_template("actinic-keratosis.html")
+
+
+@app.route("/info")
+def info():
+    return render_template("info.html")
+
+
+@app.route("/chickenpox")
+def chickenpox():
+    return render_template("chickenpox.html")
+
+
+@app.route("/cold-sore")
+def cold():
+    return render_template("cold-sore.html")
+
+
+@app.route("/ringworm")
+def ringworm():
+    return render_template("ringworm.html")
+
+
+@app.route("/vitiligo")
+def vitiligo():
+    return render_template("vitiligo.html")
 
 
 @app.route("/upload", methods=["POST"])
@@ -97,4 +142,4 @@ def upload_file():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port="5000")
