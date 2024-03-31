@@ -51,18 +51,53 @@ function initMap(lats,longs)
     zoom: 15,
     });
 
-    // Create a PlacesService object to interact with Places API
     const service = new google.maps.places.PlacesService(map);
+    const service2 = new google.maps.places.PlacesService(map);
+    const service3 = new google.maps.places.PlacesService(map);
 
-    // Define the request to search for skin specialists within a radius
+    //Request to search for skin specialists within a radius
     const request = {
         location: { lat: lats, lng: longs }, //location
         radius: 100000, // 100km radius
-        keyword: "skin specialist, skin cancer, dermatologist",
+        keyword: "skin specialist",
+    };
+
+    const request2 = {
+        location: { lat: lats, lng: longs }, //location
+        radius: 100000, // 100km radius
+        keyword: "dermatologist",
+    };
+
+    const request3 = {
+        location: { lat: lats, lng: longs }, //location
+        radius: 100000, // 100km radius
+        keyword: "skin cancer",
     };
 
     // Perform nearby search to find skin specialists
     service.nearbySearch(request, (results, status) => {
+        if (status === google.maps.places.PlacesServiceStatus.OK) 
+        {
+            // Loop through the results and create markers
+            for (let i = 0; i < results.length; i++) 
+            {
+                createMarker(results[i]);
+            }
+        }
+    });
+
+    service2.nearbySearch(request2, (results, status) => {
+        if (status === google.maps.places.PlacesServiceStatus.OK) 
+        {
+            // Loop through the results and create markers
+            for (let i = 0; i < results.length; i++) 
+            {
+                createMarker(results[i]);
+            }
+        }
+    });
+
+    service3.nearbySearch(request3, (results, status) => {
         if (status === google.maps.places.PlacesServiceStatus.OK) 
         {
             // Loop through the results and create markers
