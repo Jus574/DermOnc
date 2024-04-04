@@ -55,7 +55,7 @@ def process_image(img_path):
     blackhat = cv2.morphologyEx(grayScale, cv2.MORPH_BLACKHAT, kernel)
     ret, threshold = cv2.threshold(blackhat, 0, 255, cv2.THRESH_BINARY)
     final_image = cv2.inpaint(img, threshold, 1, cv2.INPAINT_TELEA)
-    gray_image = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    gray_image = cv2.cvtColor(final_image, cv2.COLOR_BGR2GRAY)
     blurred_image = cv2.GaussianBlur(gray_image, (5, 5), 0)
     _, thresholded_image = cv2.threshold(
         blurred_image, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU

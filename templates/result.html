@@ -110,7 +110,7 @@
         <img src="../static/uploads/{{img_path}}" alt="Uploaded Image" />
 
         <!-- {{result}} -->
-        {% if disease == 1 %}
+        {% if disease == 1 or disease == 3%}
         <h1>Benign Non Cancerous</h1>
         <p>
             There is a {% if result[0] > 70 %}
@@ -119,16 +119,6 @@
             low
             {% endif %} chance this image is benign.
         </p>
-
-        {% elif disease == 3 %}
-        <h1>BCC Cancerous</h1>
-        <p>
-            There is a {% if result[0] > 70 %}
-            high
-            {% else %}
-            low
-            {% endif %} chance this image is of basal cell carcinoma.
-          </p>
 
         {% elif disease == 4 %}
         <h1>Melanoma Cancerous</h1>
